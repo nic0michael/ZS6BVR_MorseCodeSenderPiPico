@@ -36,18 +36,18 @@ This project uses a **Raspberry Pi Pico** running **MicroPython** to send Morse 
                  GND                          GND
                                
                                              
-                      +5V Regulated ────────────┬───────────────┐
+                      +5V Regulated o───────────┬───────────────┐
                                                 │               │
-                                                │               ▼ One side of relay and diode cathode
+                                                │               ▼ One side of relay and Diode Cathode
                               Raspberry Pi Pico |
-                                            Relay              (Top View)
+                                                |              (Top View)
                                                 │
                                                 │        ┌─────────────────────┐
                                Flyback Diode    │        │                     │
                              (e.g., 1N4148)     └────────▶ VSYS (Pin 39)       │
                              Cathode ──|<── Anode        │                     │
                                                          │                     │
-     diode anode and                                     │                     │
+     Diode Anode and                                     │                     │
      Other side of relay to Collector ────────┐          │                     │
                                              ┌▼┐         │                     │
                                 NPN Transistor│          │                     │
