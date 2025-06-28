@@ -39,8 +39,9 @@ This project uses a **Raspberry Pi Pico** running **MicroPython** to send Morse 
                                              
                       +5V Regulated o───────────┬──────────┐
                                                 │          │
-                                                │          ▼ One side of relay and Flyback Diode Cathode
-                              Raspberry Pi Pico |
+                                                │          ▼ One side of relay 
+                              Raspberry Pi Pico |            and Flyback Diode Cathode
+                                                │
                                                 |              (Top View)
                                                 │
                                                 │        ┌─────────────────────┐
