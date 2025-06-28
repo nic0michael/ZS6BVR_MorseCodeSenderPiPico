@@ -63,7 +63,7 @@ This project uses a **Raspberry Pi Pico** running **MicroPython** to send Morse 
                                                          │                     │
                            Base ── 1kΩ ──────────────────▶ GP1 (Pin 2)         │
                                                          │                     │
-                           Emitter ──────── GND ─────────▶ GND (Pin 38)        │
+                           Emitter ───────▶ GND ─────────▶ GND (Pin 38)        │
                                                          └─────────────────────┘
 
 Please place a fuse at the input and output of the regulator 0.5A Slow-blow fuses
