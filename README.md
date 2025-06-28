@@ -137,9 +137,9 @@ Special keys: * = quit, + = faster, - = slower, @ = dots mode
 ### 4.1 Commands:
 
 * Type any message (e.g., `CQ CQ DE ZS6BVR`) and press Enter to transmit.
-* `+` / `++`: Increase WPM
-* `-` / `--`: Decrease WPM
-* `@`: Dot mode (sends a stream of dots)
+* `+` or  `++`: Increase WPM (by 1WP or 5WPM)
+* `-` or  `--`: Decrease WPM (by 1WP or 5WPM)
+* `@`: Dot mode (sends a stream of dots for Ocsilloscope callibration of speed)
 * `*`: Exit program
 
 ---
