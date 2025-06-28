@@ -9,12 +9,13 @@ This project uses a **Raspberry Pi Pico** running **MicroPython** to send Morse 
 ## 1. What You'll Need
 
 - Raspberry Pi Pico (not Pico W unless you adapt for it)
-- Reed relay or solid-state relay
+- 5v Reed Relay (not solid-state relay)
 - NPN transistor (e.g., 2N2222 or 2N3904 or BC547)
 - 1kΩ resistor (base resistor)
-- Diode for flyback protection (e.g., 1N4148 or 1N4007)
+- Two Diodes for flyback protection (e.g., 1N4148 or 1N4007)
+- 7805 5V regulator
 - USB cable (micro USB)
-- Thonny IDE (for uploading/running MicroPython code)
+- Thonny IDE software (for uploading/running MicroPython code)
 
 ---
 
@@ -36,19 +37,24 @@ This project uses a **Raspberry Pi Pico** running **MicroPython** to send Morse 
                  GND                          GND
                                
                                              
-                      +5V Regulated o───────────┬───────────────┐
-                                                │               │
-                                                │               ▼ One side of relay and Diode Cathode
+                      +5V Regulated o───────────┬──────────┐
+                                                │          │
+                                                │          ▼ One side of relay and Flyback Diode Cathode
                               Raspberry Pi Pico |
                                                 |              (Top View)
                                                 │
                                                 │        ┌─────────────────────┐
-                               Flyback Diode    │        │                     │
-                             (e.g., 1N4148)     └────────▶ VSYS (Pin 39)       │
-                             Cathode ──|<── Anode        │                     │
+     Flyback Diode                              │        │                     │
+    (e.g., 1N4148)                              └────────▶ VSYS (Pin 39)       │
+    Cathode ──|<── Anode                                 │                     │
                                                          │                     │
-     Diode Anode and                                     │                     │
-     Other side of relay to Collector ────────┐          │                     │
+     Ocsilloscope Calibrate output   o────────┐          │                     │
+                                              |          │                     │
+     Flyback Diode Anode              ▶───────┐          │                     │
+                                              |          │                     │
+     Other side of relay              ▶───────┐          │                     │
+                                              |          │                     │
+                                 Collector    |          │                     │
                                              ┌▼┐         │                     │
                                 NPN Transistor│          │                     │
                                              └┬┘         │                     │
@@ -59,7 +65,8 @@ This project uses a **Raspberry Pi Pico** running **MicroPython** to send Morse 
                            Emitter ──────── GND ─────────▶ GND (Pin 38)        │
                                                          └─────────────────────┘
 
-Please place a fuse at the input and output of the regulator 0.5A slowblow
+Please place a fuse at the input and output of the regulator 0.5A Slow-blow fuses
+Connect Oscilloscope to collector o
 
 ```
 
