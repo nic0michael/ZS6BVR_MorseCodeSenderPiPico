@@ -36,8 +36,8 @@ This project uses a **Raspberry Pi Pico** running **MicroPython** to send Morse 
                   │                            |
                  GND                          GND
                                
-                                             
-                      +5V Regulated o───────────┬──────────┐
+                                                     / Toggle switch calibrate/transmit
+                      +5V Regulated o───────────┬───o  o───┐
                                                 │          │
                                                 │          ▼ One side of relay 
                               Raspberry Pi Pico |            and Flyback Diode Cathode
@@ -67,7 +67,6 @@ This project uses a **Raspberry Pi Pico** running **MicroPython** to send Morse 
                                                          └─────────────────────┘
 
 Please place a fuse at the input and output of the regulator 0.5A Slow-blow fuses
-Connect Oscilloscope to collector o
 
 ```
 
