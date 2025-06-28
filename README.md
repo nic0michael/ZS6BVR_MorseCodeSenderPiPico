@@ -10,7 +10,7 @@ This project uses a **Raspberry Pi Pico** running **MicroPython** to send Morse 
 
 - Raspberry Pi Pico (not Pico W unless you adapt for it)
 - Reed relay or solid-state relay
-- NPN transistor (e.g., 2N2222 or BC547)
+- NPN transistor (e.g., 2N2222 or 2N3904 or BC547)
 - 1kΩ resistor (base resistor)
 - Diode for flyback protection (e.g., 1N4148 or 1N4007)
 - USB cable (micro USB)
@@ -21,19 +21,20 @@ This project uses a **Raspberry Pi Pico** running **MicroPython** to send Morse 
 ## 2. Wiring Diagram
 
 ```
-
-
-  +7V to +12V DC Input     IN ┌───────┐ OUT
+ We recomend you place a diode accross the IN and OUT pins of regulator
+       
+              Cathode   ─────────|<────────────    Anode
+                        |                     |
+  +7V to +12V DC Input  |  IN ┌───────┐ OUT   |
   ----------o─────────────────│ 7805  │────────────o------------- +5V Regulated
-                  |           └───────┘     |
-                  | +            │          |+
-                 [C1]            │         [C2]
-                  | -           GND         |-
-                 50uF                      10µF
-                  │                         |
-                 GND                       GND
-                                
-                              
+                  |           └───────┘        |
+                  | +            │             |+
+                 [C1]            │            [C2]
+                  | -           GND            |-
+                 50uF                         10µF
+                  │                            |
+                 GND                          GND
+                               
                                              
                       +5V Regulated ────────────┬───────────────┐
                                                 │               │
@@ -46,7 +47,7 @@ This project uses a **Raspberry Pi Pico** running **MicroPython** to send Morse 
                              (e.g., 1N4148)     └────────▶ VSYS (Pin 39)       │
                              Cathode ──|<── Anode        │                     │
                                                          │                     │
-     diode anode                                         │                     │
+     diode anode and                                     │                     │
      Other side of relay to Collector ────────┐          │                     │
                                              ┌▼┐         │                     │
                                 NPN Transistor│          │                     │
