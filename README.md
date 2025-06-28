@@ -76,6 +76,8 @@ Please place a fuse at the input and output of the regulator 0.5A Slow-blow fuse
 
 1. Visit: https://www.raspberrypi.com/documentation/microcontrollers/micropython.html  
    (Or go directly to https://micropython.org/download/rp2-pico/)
+
+2. Here is the [latest Micro Python: /RPI_PICO-20250415-v1.25.0.uf2](https://micropython.org/resources/firmware/RPI_PICO-20250415-v1.25.0.uf2)
 2. Press and hold the **BOOTSEL** button on the Pico, then plug it into your PC via USB.
 3. A drive called `RPI-RP2` will appear.
 4. Download the **MicroPython UF2 file** for the Pico from the site above.
