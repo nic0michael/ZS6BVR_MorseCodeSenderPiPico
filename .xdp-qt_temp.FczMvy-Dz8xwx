@@ -1,11 +1,10 @@
 ## LM567 Audio Filter Decoder
 **[KK5JY CW Modem article](https://www.kk5jy.net/cw-modem-v1/)**
 
-![](https://www.kk5jy.net/cw-modem-v1/cw-terminal-567-circuit-new.png)
+![circuit](https://www.kk5jy.net/cw-modem-v1/cw-terminal-567-circuit-new.png)
 
-Modify this for 3V output
+## We modify this for 3V output for Raspberry Pi Pico
 
-Here is your summary in short point form sentences:
 
 * **R1 (Trimmer Resistor) sets center frequency** of the LM567 VCO.
 
