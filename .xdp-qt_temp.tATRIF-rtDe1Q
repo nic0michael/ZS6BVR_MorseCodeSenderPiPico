@@ -1,5 +1,5 @@
 ## LM567 Audio Filter Decoder
-[KK5JY CW Modem article](https://www.kk5jy.net/cw-modem-v1/)
+**[KK5JY CW Modem article](https://www.kk5jy.net/cw-modem-v1/)**
 
 Modify this for 3V output
 
