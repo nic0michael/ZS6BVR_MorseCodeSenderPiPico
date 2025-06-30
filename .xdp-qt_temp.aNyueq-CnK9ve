@@ -49,7 +49,7 @@ Here is your summary in short point form sentences:
         +-----------o 3.3V Output <------ [10KΩ ]...............o Pin 8 (LM567)
         │                                          |
      [ Zener Diode ]                               |
-        │    (Vz = 3.3V, e.g., 1N4728A)            -------------o Data output  (3.3V TTL) Pi Pico (GP2 pin 4)
+        │    (Vz = 3.3V, e.g., 1N4728A)            -------------o Data output  (3.3V TTL) Pi Pico (GP1 pin 2)
         │
        GND
 ```
