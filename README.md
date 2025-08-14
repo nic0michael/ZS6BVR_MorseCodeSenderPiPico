@@ -1,4 +1,4 @@
-# ZS6BVR Morse Sender – Raspberry Pi Pico`
+# ZS6BVR Morse Sender – Raspberry Pi Pico 2 W`
 
 
 
