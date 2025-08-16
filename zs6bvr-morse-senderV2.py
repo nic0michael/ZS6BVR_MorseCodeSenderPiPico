@@ -117,16 +117,17 @@ def random_groups(n):
         time.sleep(1)
 
 def show_help():
+    print(f"\nZS6BVR Morse Sender (Raspberry Pi Pico W) Version {VERSION}")
     print("\nHelp — Command Reference:")
-    print("  *       Exit the program")
-    print("  + / -   Increase/decrease speed (WPM)")
-    print("  @       Send continuous dots (scope calibration)")
-    print("  #       Send continuous tone (frequency counter)")
-    print("  #H      Show this help message")
-    print("  [text]  Repeat text 3 times with pauses")
-    print("  {N}     Send N lines of random 5-character groups")
-    print("  !1–!6   Store text into memory slot 1–6")
-    print("  $1–$6   Insert text from memory slot 1–6")
+    print("  *                Exit the program")
+    print("  + / ++ / - / --  Increase/decrease speed (WPM)")
+    print("  @                Send continuous dots (scope calibration)")
+    print("  #                Send continuous tone (frequency counter)")
+    print("  #H               Show this help message")
+    print("  [text]           Repeat text 3 times with pauses")
+    print("  {N}              Send N lines of random 5-character groups")
+    print("  !1–!6            Store text into memory slot 1–6")
+    print("  $1–$6            Insert text from memory slot 1–6")
     print("  Any other text — Sent as Morse code\n")
 
 # -----------------------------
