@@ -4,6 +4,8 @@
 
 This project uses a **Raspberry Pi Pico** running **MicroPython** to send Morse code by controlling a relay through GPIO pin **GP1**. The relay can be used to key a ham radio transmitter for CW (Morse) transmission.
 
+**[Please read our Article:The Ultimate Morse Sender Programs
+ ](https://github.com/nic0michael/MorseSender/blob/master/TheUltimateMorseSenderProgram.pdf)**
 ---
 
 ## 1. What You'll Need
