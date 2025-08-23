@@ -1,11 +1,11 @@
-# ZS6BVR Morse Sender (Raspberry Pi Pico W) V2.1
+# ZS6BVR Morse Sender (Raspberry Pi Pico W) V2.2
 from machine import Pin
 import time, random
 
 # -----------------------------
 # Version and Calibration
 # -----------------------------
-VERSION = "2.1"
+VERSION = "2.2"
 CALIBRATION = 1.0  # Adjust to correct timing, e.g., 0.997 or 1.0045
 
 # -----------------------------
@@ -119,16 +119,16 @@ def random_groups(n):
 def show_help():
     print(f"\nZS6BVR Morse Sender (Raspberry Pi Pico W) Version {VERSION}")
     print("\nHelp — Command Reference:")
-    print("  *                Exit the program")
-    print("  + / ++ / - / --  Increase/decrease speed (WPM)")
-    print("  @                Send continuous dots (scope calibration)")
-    print("  #                Send continuous tone (frequency counter)")
-    print("  #H               Show this help message")
-    print("  [text]           Repeat text 3 times with pauses")
-    print("  {N}              Send N lines of random 5-character groups")
-    print("  !1–!6            Store text into memory slot 1–6")
-    print("  $1–$6            Insert text from memory slot 1–6")
-    print("  Any other text — Sent as Morse code\n")
+    print("  *                   Exit the program")
+    print("  + or ++ or - or --  Increase/decrease speed (WPM)")
+    print("  @                   Send continuous dots (scope calibration)")
+    print("  #                   Send continuous tone (frequency counter)")
+    print("  #H                  Show this help message")
+    print("  [text]              Repeat text 3 times with pauses")
+    print("  {N}                 Send N lines of random 5-character groups")
+    print("  !1–!6               Store text into memory slot 1–6")
+    print("  $1–$6               Insert text from memory slot 1–6")
+    print("  Any other text      Sent as Morse code\n")
 
 # -----------------------------
 # Main program
@@ -144,11 +144,17 @@ def main():
 
         if msg == "*":
             break
-        elif msg in {"+", "++"}:
+        elif msg in {"+"}:
+            wpm += 1
+            print("WPM:", wpm)
+        elif msg in {"++"}:
             wpm += 5
             print("WPM:", wpm)
-        elif msg in {"-", "--"}:
-            wpm = max(1, wpm - 5)
+        elif msg in {"-"}:
+            wpm -= 1
+            print("WPM:", wpm)
+        elif msg in {"--"}:
+            wpm -= 5
             print("WPM:", wpm)
         elif msg == "@":
             dot_mode()
@@ -191,3 +197,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
